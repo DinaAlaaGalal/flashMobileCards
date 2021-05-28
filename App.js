@@ -3,18 +3,17 @@ import { Button, Text, View } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-// import { LogBox } from "react-native";
+import { LogBox } from "react-native";
 
-import DetailsScreen from "./Components/DetailsScreen";
 import AddCard from "./Components/AddCard";
 import Deck from "./Components/Deck";
 import Decks from "./Components/Decks";
 import AddDeck from "./Components/AddDeck";
 import StartQuiz from "./Components/StartQuiz";
 import {setLocalNotification} from './Utils/helpers';
-// LogBox.ignoreLogs([
-//   "Non-serializable values were found in the navigation state",
-// ]);
+LogBox.ignoreLogs([
+  "Non-serializable values were found in the navigation state",
+]);
 
 const HomeStack = createStackNavigator();
 
@@ -110,7 +109,6 @@ function HomeStackScreen(props) {
           />
         )}
       />
-      <HomeStack.Screen name="Details" component={DetailsScreen} />
     </HomeStack.Navigator>
   );
 }
@@ -209,7 +207,6 @@ function DeckStackScreen(props) {
           />
         )}
       />
-      <DeckStack.Screen name="Details" component={DetailsScreen} />
     </DeckStack.Navigator>
   );
 }
