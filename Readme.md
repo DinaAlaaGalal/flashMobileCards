@@ -17,7 +17,7 @@ The app allows users to create different categories of flashcards called "decks"
 
 ## Installation Instructions
 
-Clone or download the project on git repsitory ''
+Clone or download the project on git repsitory 'https://github.com/DinaAlaaGalal/flashMobileCards.git'
 Run npm install in the project root directory to install dependencies
 Run npm start or expo start to launch the project
 
