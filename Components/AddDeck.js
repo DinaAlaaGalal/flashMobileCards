@@ -13,7 +13,6 @@ export default class AddDeck extends Component {
   };
 
    handleAddDeck=()=>{
-     console.log(this.props.deckId)
     this.state.deckId =(this.props.getMyStateAddition().Decks?.length)+1;
     this.props.handleDeckAddition(this.state);
    }

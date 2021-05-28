@@ -53,8 +53,13 @@ export default StartQuiz = (props) => {
     setState(s);
   };
   return (
+    
     <View style={(styles.marginSm, styles.container)}>
-      {props.route.params.currentDeck?.Quiz?.map((q, index) => {
+      {props.route.params.currentDeck?.Quiz.length==0&&
+      <Text>Sorry NO CARDS ADDED YET</Text>
+      }
+      {props.route.params.currentDeck?.Quiz.length!==0&&
+      props.route.params.currentDeck?.Quiz?.map((q, index) => {
         return (
           <View key={index}>
             <Text
@@ -77,19 +82,7 @@ export default StartQuiz = (props) => {
                 {q.Answer}
               </Text>
             )}
-            {/* <TextInput
-            style={{
-              borderWidth: 2,
-              borderColor: "lightgrey",
-              margin: 10,
-              height: 45,
-              width: 280,
-              paddingLeft: 10,
-            }}
-            placeholder="Your Answer"
-            onChangeText={(Answer) => handleAnswerChange(Answer)}
-          /> */}
-
+           
             <Button
               title="View Answer"
               color="#FFAEBC"
@@ -117,9 +110,10 @@ export default StartQuiz = (props) => {
                 </View>
               )}
           </View>
-        );
-      })}
+          );
+  })}
     </View>
+    
   );
 };
 const styles = StyleSheet.create({

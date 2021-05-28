@@ -48,7 +48,7 @@ export default Deck = (props) => {
   return (
     <View style={(styles.marginSm, styles.container)} >
              <Text style={(styles.marginSm, styles.Title)}>{props.route.params.currentDeck.deckName}</Text>
-            <Text style={(styles.marginSm,styles.SubTitle)}>{props.route.params.currentDeck.deckId-1} cards</Text>
+            <Text style={(styles.marginSm,styles.SubTitle)}>{props.route.params.currentDeck.Quiz?.length} cards</Text>
       <Button
         title="ADD CARD"
         color="#A0E7E5"
